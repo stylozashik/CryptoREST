@@ -7,11 +7,13 @@ use Illuminate\Support\Facades\Session;
 
 class DataController extends Controller
 {
+    # Component to return user form
     public function index()
     {
         return view('index');
     }
     
+    # Component for storing user and data input URL
     public function store_data(Request $request)
     {
         # Grab user requested currency
@@ -34,6 +36,7 @@ class DataController extends Controller
         return redirect('/getBitcoinInfo');
     }
 
+    # Component to return json response
     public function show_data()
     {
         # Get Session data
